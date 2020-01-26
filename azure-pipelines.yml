@@ -32,5 +32,6 @@ steps:
 
 - script: |
     pip install pytest pytest-azurepipelines
-    pytest tests/ --test-run-title="Windows Test with junitxml"
+    pip install -e .
+    python -m pytest tests/
   displayName: 'pytest'
